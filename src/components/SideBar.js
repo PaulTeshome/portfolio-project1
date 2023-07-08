@@ -5,6 +5,7 @@ import LogoSub from '../assets/images/logo_sub.png'
 import { Link, NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope,faHome,faUser } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 function SideBar() {
   return (
@@ -19,18 +20,35 @@ function SideBar() {
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
             </NavLink>
 
-            <NavLink exact='true' activeclassname='active' className='about-link' to='/'>
+            <NavLink exact='true' activeclassname='active' className='about-link' to='/about'>
                 <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
             </NavLink>
 
-            <NavLink exact='true' activeclassname='active' className='contact-link' to='/'>
+            <NavLink exact='true' activeclassname='active' className='contact-link' to='/contact'>
                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
             </NavLink>
         </nav>
 
-        <div>
-            
-        </div>
+        <ul>
+            <li>
+                <a target='_blank' rel='noreferrer' href='www.linkedin.com'>
+                    <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
+                </a>
+            </li>
+
+            <li>
+                <a target='_blank' rel='noreferrer' href='www.github.com'>
+                    <FontAwesomeIcon icon={faGithub} color='#4d4d4e' />
+                </a>
+            </li>
+
+            <li>
+                <a target='_blank' rel='noreferrer' href='www.youtube.com'>
+                    <FontAwesomeIcon icon={faYoutube} color='#4d4d4e' />
+                </a>
+            </li>
+
+        </ul>
     </div>
   )
 }
