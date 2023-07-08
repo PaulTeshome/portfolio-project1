@@ -4,8 +4,11 @@ import SideBar from './SideBar'
 
 function Layout() {
   return (
-    <div className='layout'>
+    <div className='App'>
         <SideBar/>
+        <div className='page'>
+
+        </div>
     </div>
   )
 }
