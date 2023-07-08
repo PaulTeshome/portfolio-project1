@@ -1,9 +1,25 @@
 import React from 'react'
+import LogoTitle from '../assets/images/logo-s.png'
 import './Home.scss'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='container home-page'>
+        <div className='text-zone'>
+            <h1>Hi <br/> I'm
+                <img src={LogoTitle} alt='developer'/>
+                lobodan
+                <br/>
+                web developer
+            </h1>
+            <h2>Fronted Developer / Javascript Expert / Youtuber </h2>
+            <Link to='/contact' className='flat-button'>CONTACT ME</Link>
+        </div>
+        <div>
+        <img src={LogoTitle} alt='developer' width={`50%`}/>
+        </div>
+    </div>
   )
 }
 
