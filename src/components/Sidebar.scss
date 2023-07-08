@@ -1,5 +1,5 @@
 .nav-bar{
-    width: 10%;
+    width: 5%;
     background: #181818;
     height: 100%;
     position: fixed;
@@ -11,16 +11,17 @@
     .logo{
        display: flex;
        flex-direction: column;
+       width: 100%;
        padding: 8px 0;
 
        img{
-        width:30px;
+        width:90%;
         height: auto;
         margin: 5px auto;
        }
 
        .sub-logo{
-        width: 60px;
+        width: 90%;
         height: auto;
        }
     }
@@ -35,9 +36,9 @@
         
 
         a{
-            font-size: 30px;
+            font-size: 20px;
             margin: 15px auto;
-            width:100%;
+            width:90%;
             height: auto;
             color: #4d4d4e;
             display: flex;
