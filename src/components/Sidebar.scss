@@ -1,5 +1,5 @@
 .nav-bar{
-    width: 70px;
+    width: 10%;
     background: #181818;
     height: 100%;
     position: fixed;
@@ -14,13 +14,13 @@
        padding: 8px 0;
 
        img{
-        width:28px;
+        width:30px;
         height: auto;
         margin: 5px auto;
        }
 
-       &.sub-logo{
-        width: 50px;
+       .sub-logo{
+        width: 60px;
         height: auto;
        }
     }
@@ -32,9 +32,13 @@
         display: flex;
         flex-direction: column;
 
+        
+
         a{
             font-size: 30px;
             margin: 15px auto;
+            width:100%;
+            height: auto;
             color: #4d4d4e;
             display: flex;
             flex-direction: column;
@@ -67,6 +71,8 @@
                 align-self: flex-start;
                 opacity: 0;
                 transition: all 0.3s ease-out;
+                bottom: 50%;
+                position: relative;
             }
 
             &.home-link{
@@ -86,8 +92,38 @@
                     content: 'CONTACT';
                 }
             }
+
+            &.active{
+                svg{
+                 color: #ffd700;
+                }
+            }
         }
 
 
+    }
+
+    ul{
+        width:100%;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+
+        li{
+
+            margin: 5px auto;
+            a{
+                line-height: 16px;
+                font-size: 15px;
+
+                &:hover{
+                    svg{
+                        color: #ffd700;
+                        transition: all 0.3s ease-out;
+                    }
+                   
+                }
+            }
+        }
     }
 }
