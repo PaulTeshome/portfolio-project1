@@ -11,3 +11,14 @@
     margin-left: 5%;
     padding-bottom: 10px;
 }
+
+.container{
+    width:100%;
+    will-change: contents;
+    height: 90%;
+    opacity: 0;
+    z-index:1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
