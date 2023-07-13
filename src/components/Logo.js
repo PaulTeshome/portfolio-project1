@@ -1,6 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import LogoS from '../assets/images/logo-s.png'
 import './Logo.scss'
+import  DrawSVGPlugin  from 'gsap-trial/DrawSVGPlugin';
+import  gsap from 'gsap-trial';
 
 function Logo() {
 
@@ -8,9 +10,42 @@ function Logo() {
     const outlineLogoRef= useRef();
     const solidLogoRef= useRef();
 
+    useEffect(()=>{
+      gsap.registerPlugin(DrawSVGPlugin)
+
+      let ctx = gsap.context(() => {
+    
+        gsap.timeline().to(bgRef.current,{
+          duration:2,
+          opacity:1,
+        }).from(outlineLogoRef.current ,{
+          drawSVG: 0,
+          duration:20,
+        })
+  
+        gsap.fromTo(
+          solidLogoRef.current,
+          {
+            opacity:0,
+          },
+          {
+            opacity:1,
+            delay:5,
+            duration:4,
+          }
+        )
+        
+      }, bgRef);
+      
+      return () => ctx.revert(); 
+
+  
+
+    },[])
+
   return (
-    <div className='logo-container'>
-        <img className='solid-logo' src={LogoS} alt="S" />
+    <div className='logo-container' ref={bgRef}>
+        <img ref={solidLogoRef} className='solid-logo' src={LogoS} alt="S" />
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
         width="559.000000pt" height="897.000000pt" viewBox="0 0 559.000000 897.000000"
         preserveAspectRatio="xMidYMid meet">
@@ -20,9 +55,13 @@ function Logo() {
         fill="#000000" 
         stroke="none"
         className='svg-container'
+        
         >
 
-        <path d="M2930 8959 c-344 -16 -623 -85 -915 -228 -231 -114 -406 -241 -600
+        <path 
+        fill="#022c43"
+        ref={outlineLogoRef}
+        d="M2930 8959 c-344 -16 -623 -85 -915 -228 -231 -114 -406 -241 -600
         -436 -61 -60 -145 -137 -188 -169 -432 -325 -715 -757 -806 -1230 -109 -564
         21 -1117 384 -1641 250 -360 780 -877 1547 -1511 451 -373 600 -505 803 -708
         215 -216 275 -293 350 -448 55 -114 75 -188 82 -298 6 -96 -6 -173 -39 -257
