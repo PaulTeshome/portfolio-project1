@@ -1,9 +1,14 @@
 import React from 'react'
 import './Contact.scss'
+import Loader from 'react-loaders'
 
 function Contact() {
   return (
-    <div>Contact</div>
+   <>
+    contactForm
+   <Loader type='pacman'/>
+   </>
+    
   )
 }
 
