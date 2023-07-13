@@ -8,6 +8,7 @@ function Layout() {
     <div className='App'>
         <SideBar/>
         <div className='page'>
+          
             <Outlet/>
         </div>
     </div>
