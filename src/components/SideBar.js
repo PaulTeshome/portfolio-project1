@@ -31,19 +31,19 @@ function SideBar() {
 
         <ul>
             <li>
-                <a target='_blank' rel='noreferrer' href='www.linkedin.com'>
+                <a target='_blank' rel='noreferrer' href='https://www.linkedin.com'>
                     <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
                 </a>
             </li>
 
             <li>
-                <a target='_blank' rel='noreferrer' href='www.github.com'>
+                <a target='_blank' rel='noreferrer' href='https://www.github.com'>
                     <FontAwesomeIcon icon={faGithub} color='#4d4d4e' />
                 </a>
             </li>
 
             <li>
-                <a target='_blank' rel='noreferrer' href='www.youtube.com'>
+                <a target='_blank' rel='noreferrer' href='https://www.youtube.com'>
                     <FontAwesomeIcon icon={faYoutube} color='#4d4d4e' />
                 </a>
             </li>
