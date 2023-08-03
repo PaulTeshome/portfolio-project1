@@ -29,7 +29,13 @@ return (
           </p>
           <div className='contact-form'>
             <form>
-
+            <ul>
+              <li>Name</li>
+              <li>Email</li>
+              <li>Phone</li>
+              <li>Fax</li>
+              <li>contact</li>
+            </ul>
             </form>
           </div>
       </div>
